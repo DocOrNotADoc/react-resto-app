@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import './menu-list-item.scss';
 
-const MenuListItem = ({menuItem}) => {
+const MenuListItem = ({menuItem, onAddToCart}) => {
     const {title, price, url, category} = menuItem;
 
     const LinkToItemPage = styled(Link)`
@@ -25,7 +25,7 @@ const MenuListItem = ({menuItem}) => {
                         <div>
                             <div className="menu__category">Category: <span>{category}</span></div>
                             <div className="menu__price">Price: <span>{price}$</span></div>
-                            <button className="menu__btn">Add to cart</button>
+                            <button onClick={() => onAddToCart()} className="menu__btn">Add to cart</button>
                         </div>
                     </div>
             </li>
