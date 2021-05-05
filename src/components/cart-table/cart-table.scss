@@ -21,12 +21,52 @@
         border: 1px solid rgba(256,256,256, .2);
         background-color: rgba(0,0,0,.7);
         box-shadow: 0 0 20px rgba(256,256,256, .1);
-        &-title, &-price  {
+        &-title, &-totalprice {
             width: 250px;
             text-align: center;
             color: #fff;
             font-size: 24px;
         }
+        &-totalprice {
+            width: 180px;
+            padding-right: 40px;
+        }
+        &-price {
+            &-counter {
+                display: flex;
+                justify-content: center;
+                width: 150px;
+                text-align: center;
+                color: #fff;
+                font-size: 18px;
+            }
+            &_wrapper {
+                display: flex;
+                align-items: center;
+            }
+        }
+        &-counter {
+            width: 150px;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+        }
+        &-dec, &-inc {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+            margin: -7px 11px 0 11px;
+            font-size: 26px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        // &-totalprice {
+        //         width: 250px;
+        //         text-align: center;
+        //         color: #fff;
+        //         font-size: 24px;
+        // }
         &-img {
             height: 125px;
             width: 250px;
