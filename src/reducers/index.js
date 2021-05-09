@@ -10,8 +10,9 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   // console.log(state);
   const idx = action.payload;
-  const itemIdx = state.items.findIndex(item => item.id === idx);
-  const currentItem = state.items.find(item => item.id === idx);
+  const compIndex = item => item.id === idx;
+  const itemIdx = state.items.findIndex(compIndex);
+  const currentItem = state.items.find(compIndex);
 
   switch (action.type) {
 
@@ -48,7 +49,7 @@ const reducer = (state = initialState, action) => {
           totalPrice: state.totalPrice + newItem.price
         }
       }
-      const item = state.menu.find(item => item.id === idx);      // если товара раньше не было в корзине
+      const item = state.menu.find(compIndex);      // если товара раньше не было в корзине
       const newItem = {
         title: item.title,
         price: item.price,

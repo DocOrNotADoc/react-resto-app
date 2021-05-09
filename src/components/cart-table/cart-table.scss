@@ -61,12 +61,6 @@
                 cursor: pointer;
             }
         }
-        // &-totalprice {
-        //         width: 250px;
-        //         text-align: center;
-        //         color: #fff;
-        //         font-size: 24px;
-        // }
         &-img {
             height: 125px;
             width: 250px;
@@ -84,6 +78,17 @@
         font-size: 20px;
         border-radius: 100%;
         border: 1px solid #fff;
+        cursor: pointer;
+    }
+    &__btn {
+        margin-top: 35px;
+        width: 150px;
+        height: 40px;
+        border: none;
+        background-color: #29a745;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
         cursor: pointer;
     }
 }
